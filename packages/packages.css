@@ -1,0 +1,133 @@
+main {
+	padding-top: 1rem;
+	width: 100%;
+	margin: auto;
+}
+
+.background {
+    position: fixed;
+    background: url(../images/packages-background.jpg) center/cover no-repeat border-box;
+    filter: grayscale(40%) brightness(80%);
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.package {
+    border: 4px solid #0a3d18;
+    margin: 2rem 0;
+    width: 80%;
+}
+
+.package:hover,
+.package:active {
+    border: 4px solid #f02a5c;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+#plus {
+    position: relative;
+    background: rgba(202, 255, 179, 0.95);
+    border-left: 0;
+    overflow: hidden;
+}
+
+#free {
+    float: right;
+    background: rgba(214, 255, 203, 0.95);
+    border-right: 0;
+    text-align: right;
+    margin-top: 0;
+}
+
+#premium {
+    background: rgba(35, 67, 35, 0.95);
+    border-left: 0;
+    clear: both;
+}
+
+.package a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 1rem;
+}
+
+.package__badge {
+    width: 10rem;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+    padding: 0.4rem;
+    position: absolute;
+    background-color: #f02a5c;
+    margin: 0;
+    top: 0.7rem;
+    right: 0.7rem;
+    transform: rotateZ(45deg) translate(3rem, -1.5rem);
+}
+
+.package__title {
+    font-size: 2rem;
+    color: #0a3d18;
+    margin: 1rem 0;
+}
+
+#premium .package__title{
+    color: #93fdaf;
+}
+
+.package__subtitle{
+    color: #666;
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+#premium .package__subtitle{
+    color: #d4d3d3;
+}
+
+.package__info {
+    background: white;
+    padding: 8px;
+    border: 2px solid #0a3d18;
+    margin: 16px 0;
+}
+
+
+
+@media (min-width: 40rem) {
+	.package {
+		width: 65%
+	}
+
+	main {
+		max-width: 90rem;
+	}
+}
+
+@media (min-width: 90rem) {
+	#plus.package,
+	#premium.package {
+		border-left: 4px solid #0a3d18;
+	}
+	
+	#plus.package:hover,
+	#plus.package:active,
+	#premium.package:hover,
+	#premium.package:active {
+    border-left: 4px solid #f02a5c;
+	}
+	
+	#free.package {
+		border-right: 4px solid #0a3d18;
+	}
+	
+	#free.package:hover,
+	#free.package:active {
+		border-right: 4px solid #f02a5c;
+	}
+}
+
