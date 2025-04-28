@@ -1,18 +1,20 @@
 //VARIABLES:
 
-var backdrop = document.querySelector('.backdrop');
-var modal = document.querySelector('.modal');
-var selectPlanButtons = document.querySelectorAll('.plan button');
-var modalNoButton = document.querySelector('.modal #no');
-var toggleButton = document.querySelector('.toggle-button');
-var mobileNav = document.querySelector('.mobile-nav');
+const backdrop = document.querySelector('.backdrop');
+const modal = document.querySelector('.modal');
+const selectPlanButtons = document.querySelectorAll('.plan button');
+const modalNoButton = document.querySelector('.modal #no');
+const toggleButton = document.querySelector('.toggle-button');
+const mobileNav = document.querySelector('.mobile-nav');
 
 
 //EVENT LISTENERS:
 
-for (var i = 0; i < selectPlanButtons.length; i++) {
-    selectPlanButtons[i].addEventListener('click', showModal);
-}
+// for (var i = 0; i < selectPlanButtons.length; i++) {
+//     selectPlanButtons[i].addEventListener('click', showModal);
+// }
+
+selectPlanButtons.forEach((butt) => butt.addEventListener('click', showModal))
 
 if (modalNoButton) {
     modalNoButton.addEventListener('click', hideModal);
